@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav .active {
+    background: rgb(63, 27, 27);
+    color: white;
+    border-radius: 1rem;
+}
+
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
