@@ -26,7 +26,7 @@ const Product_Card = ({ data }: { data: Product_Type }) => {
 
 
     return (
-        <div className="card card-compact bg-base-100 w-96 max-h-[400px] shadow-xl border border-[#f0f0f0]">
+        <div className="card card-compact bg-base-100 w-[22rem] max-h-[400px] shadow-xl border border-[#f0f0f0]">
             <figure>
                 <img
                     src={data?.image}

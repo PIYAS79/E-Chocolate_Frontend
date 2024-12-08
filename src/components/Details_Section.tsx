@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 const Details_Section = () => {
     return (
         <div className='py-16 bg-[#f4d6b1]'>
-            <div className='grid grid-cols-2 justify-between max-w-7xl mx-auto'>
-                <div className='text-black flex justify-center flex-col'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 justify-between max-w-7xl mx-auto'>
+                <div className='text-black flex justify-center flex-col px-5 lg:px-0'>
                     <h1 className="mb-5 text-5xl font-bold">Our Trust Layers</h1>
                     <p className="mb-5">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem

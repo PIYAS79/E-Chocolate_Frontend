@@ -24,8 +24,8 @@ const Search = ({
   };
 
   return (
-    <div className="mb-5 flex justify-between bg-white rounded-xl">
-      <div className="flex gap-2">
+    <div className="mb-5 flex justify-between bg-white rounded-xl flex-col items-center md:flex-row">
+      <div className="flex gap-2 mb-3 md:mb-0">
         <select
           className="select w-full max-w-xs border border-[#5e464a]"
           value={selectedOption}

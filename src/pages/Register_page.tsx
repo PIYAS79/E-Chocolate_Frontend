@@ -32,8 +32,8 @@ const Register_page = () => {
 
   return (
     <div className="max-w-7xl mx-auto h-screen flex justify-center items-center">
-      <div className=" rounded-2xl overflow-hidden h-[700px] flex">
-        <img src="https://i.ibb.co.com/nkC60C8/logomn2.png" alt="" />
+      <div className=" rounded-2xl overflow-hidden h-[700px] lg:flex hidden">
+        <img src="https://res.cloudinary.com/do7nin6oo/image/upload/v1733647709/Pngtree_chocolate_splash_15416044_rblbm5.png" alt="" />
       </div>
       <form onSubmit={handleRegister} className="card-body flex justify-center max-w-lg mx-auto h-[780px] -mt-5">
         <h1 className="text-3xl font-bold text-center">Register USER</h1>

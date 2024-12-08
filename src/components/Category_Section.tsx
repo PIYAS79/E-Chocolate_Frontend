@@ -11,17 +11,20 @@ const Category_Section = () => {
       <p className="text-center text-sm mb-10 text-white">Explore All Categories Available Here for Your Needs!</p>
 
       <div className="flex justify-around mb-10 max-w-7xl mx-auto">
-        {categories?.slice(0, 10).map((one: Category_Type) => (
-          <Link
-            to="/product"
-            state={{ selectedCategory: one?.name }}
-            key={one?.category_id}
-            className="w-[100px] aspect-square shadow-md text-white text-sm bg-[#5e464a] hover:bg-[#46292d] cursor-pointer border border-gray-500 rounded-full font-semibold p-2 flex justify-center items-center"
-          >
-            <p>{one?.name}</p>
-          </Link>
-        ))}
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10">
+          {categories?.slice(0, 10).map((one: Category_Type) => (
+            <Link
+              to="/product"
+              state={{ selectedCategory: one?.name }}
+              key={one?.category_id}
+              className="w-[100px] aspect-square shadow-md text-white text-sm bg-[#5e464a] hover:bg-[#46292d] cursor-pointer border border-gray-500 rounded-full font-semibold p-2 flex justify-center items-center"
+            >
+              <p>{one?.name}</p>
+            </Link>
+          ))}
+        </div>
       </div>
+
     </div>
   );
 };

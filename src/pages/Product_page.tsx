@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; 
+import { useLocation } from "react-router-dom";
 import Product_Card from "../components/Product_Card";
 import Search from "../components/Search";
 import { Product_Type } from "../constants/types";
@@ -17,22 +17,22 @@ const Product_page = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleClickCategorySearch = (ct: string) => {
-    setSelectedCategory(ct === "reset" ? "" : ct); 
-    setSearchQuery(""); 
+    setSelectedCategory(ct === "reset" ? "" : ct);
+    setSearchQuery("");
   };
 
   const handleNameSearch = (query: string) => {
     setSearchQuery(query);
-    setSelectedCategory(""); 
+    setSelectedCategory("");
   };
 
   const filteredProducts = selectedCategory
     ? products?.filter((product: Product_Type) => product.category === selectedCategory)
     : searchQuery
-    ? products?.filter((product: Product_Type) =>
+      ? products?.filter((product: Product_Type) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : products; 
+      : products;
 
   return (
     <div className="p-5 mb-10 max-w-7xl mx-auto overflow-y-scroll h-[calc(100vh-4.4rem)]">
@@ -41,10 +41,14 @@ const Product_page = () => {
         handleNameSearch={handleNameSearch}
         categories={categories}
       />
-      <div className="grid grid-cols-3 gap-y-5 h-full">
-        {filteredProducts?.map((one: Product_Type) => (
-          <Product_Card key={one.product_id} data={one} />
-        ))}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 items-center">
+          {
+            filteredProducts?.slice(0, 6)?.map((one: Product_Type) => (
+              <Product_Card key={one?.product_id} data={one} />
+            ))
+          }
+        </div>
       </div>
     </div>
   );

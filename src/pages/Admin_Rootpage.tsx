@@ -7,14 +7,13 @@ const Admin_Rootpage = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <Outlet />
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden ">
                     Open drawer
                 </label>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-[#5e464a] text-base-content min-h-full w-80 p-4">
-                    {/* Sidebar content here */}
                     <Link to={'/'}>
                         <li className="bg-white text-black text-bold rounded-xl py-3 text-center">E-Chocolate</li>
                     </Link>

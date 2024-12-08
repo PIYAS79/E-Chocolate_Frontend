@@ -20,7 +20,7 @@ const Cart_page = () => {
                 setCart(JSON.parse(storedCart));
             } catch (error) {
                 console.error("Error parsing cart data:", error);
-                setCart([]); // Fallback to an empty cart
+                setCart([]);
             }
         }
     }, []);
@@ -48,8 +48,8 @@ const Cart_page = () => {
 
 
     return (
-        <div className="flex max-w-7xl mx-auto gap-3 p-5 h-[calc(100vh-4.4rem)]">
-            <div className="w-[50%] gap-y-3">
+        <div className="flex max-w-7xl mx-auto gap-3 p-5 h-[calc(100vh-4.4rem)] flex-col lg:flex-row">
+            <div className="w-100%] lg:w-[50%] gap-y-3">
                 {cart.map((product, index) => (
                     <div
                         key={index}
@@ -58,7 +58,7 @@ const Cart_page = () => {
                         <div className="p-5">
                             <h1 className="font-bold text-2xl">{product.name}</h1>
                             <h1>Quantity: 1</h1>
-                            <h2>Price: ৳{product.price}</h2>
+                            <h2>Price: ${product.price}</h2>
                         </div>
                         <div className="h-full flex justify-center items-center">
                             <img
@@ -71,7 +71,7 @@ const Cart_page = () => {
                 ))}
             </div>
 
-            <div className="w-[50%] bg-gray-200 text-center h-[200px] rounded-xl overflow-hidden">
+            <div className="w-[100%] lg:w-[50%] bg-gray-200 text-center h-[200px] rounded-xl overflow-hidden">
                 <h1 className="text-2xl bg-[#5e464a] py-2 font-bold text-white">Purchase Section</h1>
                 <h1 className="text-xl font-bold mt-2">Total</h1>
                 <h1 className="text-4xl font-bold">${totalPrice}</h1>

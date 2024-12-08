@@ -8,9 +8,14 @@ const Profile_Page = () => {
 
     return (
         <div className="h-[calc(100vh-4.4rem)] flex flex-col justify-center items-center text-center max-w-5xl gap-5 mx-auto bg-gray-200 my-10 rounded-xl">
-            {image && <img
-                src={image}
-                className="max-w-s shadow-2xl w-[250px] aspect-square rounded-full object-cover mt-3" />}
+            {
+                <img
+                    className="max-w-s shadow-2xl w-[250px] aspect-square rounded-full object-cover mt-3"
+                    src={image ? image : "https://i.ibb.co.com/TtWzY9p/photo-2024-11-22-00-22-16.jpg"}
+                    alt="Avatar"
+                    width={300}
+                />
+            }
             <div className="pb-5">
                 <h1 className="text-4xl font-bold">Profile Information</h1>
                 <p className="pt-5"><span className="font-bold">User Name :</span>  {name}</p>

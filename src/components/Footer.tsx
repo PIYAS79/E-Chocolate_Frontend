@@ -6,7 +6,7 @@ const Footer = () => {
                 <aside>
                     <img width={100} src="https://i.ibb.co.com/2qcCqDx/logomn-removebg-preview.png" alt="" />
                     <p className="text-white">
-                        MarketNest
+                        E-Chocolate
                         <br />
                         Providing reliable service since 2024
                     </p>
